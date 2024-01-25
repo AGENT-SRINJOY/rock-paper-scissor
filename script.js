@@ -19,12 +19,18 @@ const rockMove = () =>{
    let comp = computermv()
    if(playermv == comp){
     text.innerText = 'The computer also chose rock hence draw'
+    text.classList.remove('win')
+    text.classList.remove('loose')
    }else if(comp == 'scissor'){
     text.innerText = 'The computer chose scissor hence you gain a point'
+    text.classList.add('win')
+    text.classList.remove('loose')
     playervalue += 1
     playerscore.innerText = `PLAYER: ${playervalue}`;
    }else{
     text.innerText = 'The computer chose paper hence you loose'
+    text.classList.add('loose')
+    text.classList.remove('win')
     computervalue += 1;
     computerscore.innerText = `COMPUTER: ${computervalue}`;
    }
@@ -35,13 +41,18 @@ const paperMove = () =>{
   let comp = computermv()
   if(playermv == comp){
    text.innerText = 'The computer also chose paper hence draw'
+   text.classList.remove('win')
+   text.classList.remove('loose')
   }else if(comp == 'scissor'){
    text.innerText = 'The computer chose scissor hence you loose '
-   
+   text.classList.add('loose')
+   text.classList.remove('win')
    computervalue += 1;
    computerscore.innerText = `COMPUTER: ${computervalue}`;
   }else{
    text.innerText = 'The computer chose rock hence you gain a point'
+   text.classList.add('win')
+   text.classList.remove('loose')
    playervalue += 1
    playerscore.innerText = `PLAYER: ${playervalue}`;
   }
@@ -52,12 +63,18 @@ const scissorMove = () =>{
   let comp = computermv()
   if(playermv == comp){
    text.innerText = 'The computer also chose scissor hence draw'
+   text.classList.remove('win')
+   text.classList.remove('loose')
   }else if(comp == 'rock'){
    text.innerText = 'The computer chose rock hence you loose '
+   text.classList.add('loose')
+   text.classList.remove('win')
    computervalue += 1;
    computerscore.innerText = `COMPUTER: ${computervalue}`;
   }else{
    text.innerText = 'The computer chose paper hence you gain a point'
+   text.classList.add('win')
+   text.classList.remove('loose')
    playervalue += 1
    playerscore.innerText = `PLAYER: ${playervalue}`;
   }
