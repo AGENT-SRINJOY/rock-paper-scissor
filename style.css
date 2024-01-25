@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: monospace;
+  color: #fff;
+}
+ 
+body{
+  background-color: black;
 }
 img{
   height: 100px;
@@ -15,14 +20,17 @@ img{
   
 }
 .components{
-  
+  background-color: black;
   display: flex;
-  
+  padding-top: 20px;
   justify-content: center;
 }
 
 img:hover{
-  border: 2px solid black;
+  border: 3px solid #96E9C6;
+}
+.c{
+  margin-right: 2rem;
 }
 
 .c p{
@@ -47,5 +55,21 @@ img:hover{
   margin-top: 30px;
   font-size: 15px;
   font-weight: 500;
+  background-color: black;
+}
+#text{
+  display: inline-block;
+  padding: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.win{
+  background-color: #96E9C6;
+  color: black;
+  
 }
 
+.loose{
+  background-color: red;
+}
